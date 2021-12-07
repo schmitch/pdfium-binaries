@@ -1,16 +1,6 @@
 name: Build
 
-on:
-  workflow_dispatch:
-    inputs:
-      branch:
-        description: PDFium branch
-        required: false
-        default: main
-      version:
-        description: PDFium version
-        required: false
-        default: ""
+on: push
 
 jobs:
   build:
