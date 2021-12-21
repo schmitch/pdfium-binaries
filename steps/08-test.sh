@@ -37,7 +37,7 @@ case "$OS-$CPU" in
     ;;
   ios-arm64)
     # WARNING: doesn't work, see following page
-    # https://discourse.cmake.org/t/find-package-stops-working-when-cmake-system-name-ios/4609?u=bblanchon
+    # https://discourse.cmake.org/t/find-package-stops-working-when-cmake-system-name-ios/4609
     CMAKE_ARGS+=(
       -D CMAKE_SYSTEM_NAME="iOS"
       -D CMAKE_OSX_ARCHITECTURES="arm64"
@@ -45,7 +45,7 @@ case "$OS-$CPU" in
     ;;
   ios-x64)
     # WARNING: doesn't work, see following page
-    # https://discourse.cmake.org/t/find-package-stops-working-when-cmake-system-name-ios/4609?u=bblanchon
+    # https://discourse.cmake.org/t/find-package-stops-working-when-cmake-system-name-ios/4609
     CMAKE_ARGS+=(
       -D CMAKE_SYSTEM_NAME="iOS"
       -D CMAKE_OSX_ARCHITECTURES="x86_64"
