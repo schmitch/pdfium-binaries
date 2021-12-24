@@ -19,45 +19,11 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - artifact: pdfium-android-arm
-            target_os: android
-            target_cpu: arm
-            runner: ubuntu-20.04
-
-          - artifact: pdfium-android-arm64
-            target_os: android
-            target_cpu: arm64
-            runner: ubuntu-20.04
-
-          - artifact: pdfium-android-x64
-            target_os: android
-            target_cpu: x64
-            runner: ubuntu-20.04            
-
-          - artifact: pdfium-android-x86
-            target_os: android
-            target_cpu: x86
-            runner: ubuntu-20.04
-          
-          - artifact: pdfium-ios-arm64
-            target_os: ios
-            target_cpu: arm64
-            runner: macos-10.15
-
-          - artifact: pdfium-ios-x64
-            target_os: ios
-            target_cpu: x64
-            runner: macos-10.15
-
-          - artifact: pdfium-linux-arm
-            target_os: linux
-            target_cpu: arm
-            runner: ubuntu-20.04
-
           - artifact: pdfium-linux-arm64
             target_os: linux
             target_cpu: arm64
             runner: ubuntu-20.04
+            v8: true
 
           - artifact: pdfium-linux-x64
             target_os: linux
@@ -69,6 +35,7 @@ jobs:
             target_os: mac
             target_cpu: arm64
             runner: macos-10.15
+            v8: true
 
           - artifact: pdfium-mac-x64
             target_os: mac
@@ -81,11 +48,6 @@ jobs:
             target_cpu: x64
             runner: windows-2019
             v8: true
-
-          - artifact: pdfium-win-x86
-            target_os: win
-            target_cpu: x86
-            runner: windows-2019
 
     runs-on: ${{ matrix.runner }}
     steps:
