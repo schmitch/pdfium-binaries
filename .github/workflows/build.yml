@@ -23,31 +23,31 @@ jobs:
             target_os: linux
             target_cpu: arm64
             runner: ubuntu-20.04
-            v8: true
+            v8: enabled
 
           - artifact: pdfium-linux-x64
             target_os: linux
             target_cpu: x64
             runner: ubuntu-20.04
-            v8: true
+            v8: enabled
 
           - artifact: pdfium-mac-arm64
             target_os: mac
             target_cpu: arm64
             runner: macos-10.15
-            v8: true
+            v8: enabled
 
           - artifact: pdfium-mac-x64
             target_os: mac
             target_cpu: x64
             runner: macos-10.15
-            v8: true
+            v8: enabled
 
           - artifact: pdfium-win-x64
             target_os: win
             target_cpu: x64
             runner: windows-2019
-            v8: true
+            v8: enabled
 
     runs-on: ${{ matrix.runner }}
     steps:
