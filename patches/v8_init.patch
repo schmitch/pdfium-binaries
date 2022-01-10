@@ -19,7 +19,7 @@ index 000000000..18fb89dd2
 +#include "public/fpdfview.h"
 +
 +#include "v8.h"
-+#include "include/libplatform/libplatform.h"
++#include "libplatform/libplatform.h"
 +
 +extern "C"
 +{
